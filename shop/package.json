@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng lint && ng serve --port 5000",
+    "start-unix": "ng lint & ng serve --port 5000",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
