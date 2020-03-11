@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ProductService } from '../../services/product.service';
+import { ProductModel } from '../../models/product.model';
 
 @Component({
   selector: 'app-product-list',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
 
-  constructor() { }
+  public products: ProductModel[] = [];
+
+  @Output() addToCart: EventEmitter<ProductModel[]> = new EventEmitter<ProductModel[]>();
+
+  constructor(private _productService: ProductService) { }
 
   ngOnInit(): void {
+    this.products = this._productService.getProducts();
   }
 
+  onAddToCart() {
+    this._productService.selectedProducts = this.products.filter(i => i.isSelected).slice();
+  }
 }

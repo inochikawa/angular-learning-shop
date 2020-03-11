@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ShopRootComponent } from './shop-root/shop-root.component';
+import { ProductsModule } from '../products/products.module';
+import { CartModule } from '../cart/cart.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,9 @@ import { ShopRootComponent } from './shop-root/shop-root.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ProductsModule,
+    CartModule
   ],
   providers: [],
   bootstrap: [ShopRootComponent]

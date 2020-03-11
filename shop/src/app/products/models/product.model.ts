@@ -8,16 +8,18 @@ export enum ProductType {
 }
 
 export class ProductModel {
-    public id: string;
+    public id: string = uuid();
     public name: string;
     public type: ProductType;
+    public price: number = 0;
+    public isSelected: boolean = false;
 
     /**
      * Create new product model with uniq ID
      */
-    constructor(name: string, type: ProductType) {
-        this.id = uuid();
+    constructor(name: string, type: ProductType, price: number) {
         this.name = name;
         this.type = type;
+        this.price = price;
     }
 }

@@ -1,1 +1,10 @@
-<p>product-list works!</p>
+<div class="products">
+    <span class="title">Select products to buy and then click on "Add to cart". After that check "Cart" page</span>
+    <div class="list">
+        <app-product *ngFor="let product of products" [model]="product">
+        </app-product>
+    </div>
+    <div class="buttons">
+        <app-primary-button title="Add to cart" (click)="onAddToCart()"></app-primary-button>
+    </div>
+</div>

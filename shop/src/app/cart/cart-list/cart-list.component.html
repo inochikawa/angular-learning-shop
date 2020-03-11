@@ -1,0 +1,9 @@
+<div class="cart">
+    <div class="main-info">
+        <span class="total-sum">Total sum {{totalSum | appCurrency}}</span> <br>
+        <span class="total-quantity">{{totalQuantity}} items</span>
+    </div>
+    <ul>
+        <li *ngFor="let prod of products">{{prod.name}} | {{prod.price | appCurrency}}</li>
+    </ul>
+</div>

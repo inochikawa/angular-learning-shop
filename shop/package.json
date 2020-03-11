@@ -4,12 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng lint && ng serve",
-    "start-u": "ng lint & npm run kill-local-port & ng serve --port 5000",
+    "start-u": "ng lint & npm run kill-local-port & ng serve --port 5001",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "kill-local-port": "kill -9  $(lsof -t -i:5000)"
+    "kill-local-port": "kill -9  $(lsof -t -i:5001)"
   },
   "private": true,
   "dependencies": {
