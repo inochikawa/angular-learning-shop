@@ -19,12 +19,12 @@ export class ProductComponent implements OnInit {
   }
 
   onSelect() {
-    this.model.isSelected= true;
+    this.model.isSelected = true;
     // this.selectProduct.emit(this.model);
   }
 
   onRemove() {
-    this.model.isSelected= false;
+    this.model.isSelected = false;
     // this.removeProduct.emit(this.model);
   }
 }

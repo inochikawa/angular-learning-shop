@@ -12,6 +12,7 @@ import { ProductService } from '../products/services/product.service';
     CommonModule,
     SharedModule
   ],
+  // tslint:disable-next-line:object-literal-sort-keys
   exports: [CartListComponent],
   providers: [ProductService]
 })

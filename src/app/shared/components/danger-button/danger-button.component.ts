@@ -9,6 +9,7 @@ export class DangerButtonComponent implements OnInit {
 
   @Input() title: string;
   @Input() isDisabled: boolean = false;
+  // tslint:disable-next-line:no-output-native
   @Output() click: EventEmitter<void> = new EventEmitter<void>();
 
   constructor() { }

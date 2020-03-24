@@ -1,4 +1,4 @@
-import { ProductListComponent } from "../products/components/product-list/product-list.component";
+import { ProductListComponent } from '../products/components/product-list/product-list.component';
 import { Routes } from '@angular/router';
 import { CartListComponent } from '../cart/cart-list/cart-list.component';
 
@@ -11,6 +11,6 @@ class AppRoute {
 }
 
 export const appRoutes: Routes = [
-    new AppRoute("products", ProductListComponent),
-    new AppRoute("cart", CartListComponent),
-]
+    new AppRoute('products', ProductListComponent),
+    new AppRoute('cart', CartListComponent),
+];
